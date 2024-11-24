@@ -18,7 +18,7 @@ const data = {
     this.hours = now.getHours();
     this.minutes = now.getMinutes();
     this.seconds = now.getSeconds();
-    this.milliseconds = now.getMilliseconds(); // 获取毫秒
+    this.milliseconds = now.getMilliseconds(); // 获取秒
 
     // 获取时区偏移量（单位为分钟），并将其转换为类似 "UTC+8" 的格式
     const offset = now.getTimezoneOffset();  // 获取时区偏移（相对于 UTC，单位为分钟）
@@ -32,8 +32,7 @@ const data = {
     // 格式化时间为完整的时间字符串，精确到毫秒并包含时区
     let timeString = `${this.year}年${this.month < 10 ? '0' + this.month : this.month}月${this.day < 10 ? '0' + this.day : this.day}日 ` +
            `${this.weekday} ` +
-           `${this.hours < 10 ? '0' + this.hours : this.hours}:${this.minutes < 10 ? '0' + this.minutes : this.minutes}:${this.seconds < 10 ? '0' + this.seconds : this.seconds}  ` +
-           `时区: ${this.timeZoneOffset}`;
+           `${this.hours < 10 ? '0' + this.hours : this.hours}:${this.minutes < 10 ? '0' + this.minutes : this.minutes}:${this.seconds < 10 ? '0' + this.seconds : this.seconds}  ` ;
 
     // 如果分钟数为50或者20，输出“站起来活动一下吧！”
     if (this.minutes === 50||this.minutes ===20) {
@@ -44,7 +43,7 @@ const data = {
   }
 };
 
-// 每毫秒更新一次时间并显示
+// 每秒更新一次时间并显示
 function updateClock() {
   data.updateTime(); // 更新时间
   document.getElementById('clock').textContent = data.formatTime(); // 更新时钟显示
@@ -52,5 +51,5 @@ function updateClock() {
 
 // 初次加载时更新一次时钟
 updateClock();
-// 每毫秒更新时钟
-setInterval(updateClock, 1); // 以毫秒为单位更新
+// 每秒更新时钟
+setInterval(updateClock, 1); // 以秒为单位更新
