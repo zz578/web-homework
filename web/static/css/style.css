@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+/* 登录/注册框布局调整为页面左侧靠上 */
+.form-container {
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    width: 350px;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.form-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container .switch-link {
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #007bff;
+}
+/* 已有样式保留，此处追加导航栏样式 */
+
+.navbar {
+    background-color: #f6d6bd; /* 莫兰迪浅橙色 */
+    padding: 12px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+    color: #5d4037;
+    margin-right: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff7043; /* 橙红 hover 色 */
+    transform: scale(1.1);
+}
+
+.login-btn {
+    margin-left: auto;
+    color: #6d4c41;
+}
+
+.section {
+    padding: 30px;
+}
+
+h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.item-box {
+    margin-bottom: 10px;
+}

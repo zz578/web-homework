@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+    <default-config>
+        <property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="jdbcUrl">
+            jdbc:sqlserver://localhost\\SQLEXPRESS:1433;DatabaseName=campus_market;encrypt=false;trustServerCertificate=true
+        </property>
+        <property name="user">myuser</property>
+        <property name="password">mypassword123!</property>
+        <property name="initialPoolSize">3</property>
+        <property name="maxPoolSize">10</property>
+        <property name="checkoutTimeout">30000</property>
+    </default-config>
+</c3p0-config>
